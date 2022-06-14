@@ -1,0 +1,142 @@
+.sub-card {
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 320px;
+  height: 240px;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-food-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+.card-address {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.1rem;
+}
+
+.card-quantity {
+  font-size: 1.2rem;
+  color: #000;
+  background: mintcream;
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  width: 17%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card-price {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 100;
+  float: right;
+}
+
+.card-increase-button {
+  width: 15%;
+  padding: 6px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #6ede8a;
+  border: none;
+}
+
+.card-decrease-button {
+  width: 15%;
+  padding: 6px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #6ede8a;
+  border: none;
+}
+
+.card-add-to-cart-button {
+  padding: 6px;
+  width: 120%;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #376efb;
+  border: none;
+}
+
+.card-add-to-cart {
+  margin-left: 2em;
+  margin-right: 1em;
+}
+.sub-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+  backface-visibility: hidden;
+}
+
+.card-description {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-add-to-cart-button:hover {
+  background-color: #3162df;
+}
+
+.card-add-to-cart-button:active {
+  transform: translateY(2px);
+}
+
+.card-decrease-button:hover {
+  background-color: #60c379;
+}
+
+.card-increase-button:hover {
+  background-color: #60c379;
+}
+
+.card-decrease-button:active {
+  transform: translateY(2px);
+}
+
+.card-increase-button:active {
+  transform: translateY(2px);
+}

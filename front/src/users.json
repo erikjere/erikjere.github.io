@@ -1,0 +1,44 @@
+[
+  {
+    "id": 11,
+    "type": "customer",
+    "name": "John",
+    "surname": "Mayer",
+    "email": "John.Mayer@email.com",
+    "phone": "123456789",
+    "username": "JohnMayer",
+    "password": "123456",
+    "address": "123 Main St, New York, NY 10001"
+  },
+  {
+    "id": 12,
+    "type": "customer",
+    "name": "Mary",
+    "surname": "Jane",
+    "username": "MaryJane",
+    "password": "123456",
+    "email": "Mary.Jane@email.com",
+    "phone": "987654321",
+    "address": "123 Main St, New York, NY 10001"
+  },
+  {
+    "id": 91,
+    "type": "vendor",
+    "name": "Pizzeria",
+    "email": "Pizzeria@email.com",
+    "phone": "123123123",
+    "username": "Pizzeria",
+    "password": "123456",
+    "address": "125 Main St, New York, NY 10001"
+  },
+  {
+    "id": 92,
+    "type": "vendor",
+    "name": "Bakery",
+    "email": "Bakery@email.com",
+    "phone": "321321321",
+    "username": "Bakery",
+    "password": "123456",
+    "address": "127 Main St, New York, NY 10001"
+  }
+]

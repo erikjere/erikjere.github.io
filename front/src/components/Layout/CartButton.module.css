@@ -1,0 +1,27 @@
+.button {
+  color: white;
+  font-size: 0.9em;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 2px;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 5px 10px;
+  background-color: black;
+  width: auto;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #2e2e2e;
+}
+
+.icon {
+  height: 0.9em;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-right: 2px;
+  margin-bottom: 4px;
+}

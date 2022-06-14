@@ -1,0 +1,50 @@
+.list {
+  list-style: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.item-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.total-p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.button {
+  color: black;
+  font-size: 1.5rem;
+  border: none;
+  background: #74c69d;
+  padding: 0 5px;
+  border-radius: 8px;
+  margin: 3px;
+  width: 1.5rem;
+}

@@ -1,0 +1,79 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 480px;
+  gap: 10px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.submit {
+  padding: 2%;
+  border-radius: 8px;
+  border: none;
+  font-size: 1em;
+  font-family: "Rubik", sans-serif;
+  color: black;
+  background-color: #376efb;
+  width: 50%;
+}
+
+.input {
+  border: 3px solid white;
+  padding: 2%;
+  border-radius: 4px;
+  font-size: 1em;
+  font-family: "Rubik", sans-serif;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-size: 1em;
+  gap: 10px;
+  padding: 10px;
+}
+
+.expiration {
+  border: 3px solid white;
+  padding: 5.5%;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  font-family: "Rubik", sans-serif;
+  width: 100%;
+  /* max-width: 200px; */
+  align-self: auto;
+}
+
+.cvv {
+  padding: 5.5%;
+  border: 3px solid white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  font-family: "Rubik", sans-serif;
+  width: 100%;
+  /* max-width: 200px; */
+  align-self: auto;
+}
+.small-container {
+  display: flex;
+  /* flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-basis: auto; */
+}
+
+.sub-small-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}

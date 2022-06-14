@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Pizza",
+    "price": 10,
+    "quantity": 1,
+    "description": "Pizza description",
+    "image": "Photos/Pizza.jpg",
+    "address": "Pizza address"
+  },
+  {
+    "id": 2,
+    "name": "Burger",
+    "price": 20,
+    "quantity": 3,
+    "description": "Burger description",
+    "image": "Photos/Burger.jpg",
+    "address": "Burger address"
+  },
+  {
+    "id": 3,
+    "name": "Pasta",
+    "price": 30,
+    "quantity": 3,
+    "description": "Pasta description",
+    "image": "Photos/Pasta.jpg",
+    "address": "Pasta address"
+  },
+  {
+    "id": 4,
+    "name": "Salad",
+    "price": 40,
+    "quantity": 10,
+    "description": "Salad description",
+    "image": "Photos/Salad.jpg",
+    "address": "Salad address"
+  },
+  {
+    "id": 5,
+    "name": "Soup",
+    "price": 50,
+    "quantity": 5,
+    "description": "Soup description",
+    "image": "Photos/Soup.jpg",
+    "address": "Soup address"
+  }
+]

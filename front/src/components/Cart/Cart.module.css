@@ -1,0 +1,29 @@
+.title {
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title-text {
+  margin: 0;
+}
+
+.close-button {
+  color: #376efb;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  background: none;
+}
+
+.checkout-button {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  background: #376efb;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}

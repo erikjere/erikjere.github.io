@@ -1,0 +1,8 @@
+body {
+  background: rgba(0, 0, 0, 0.7) url("./background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+}
