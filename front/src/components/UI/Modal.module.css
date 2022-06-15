@@ -11,21 +11,22 @@
 .modal {
   position: fixed;
   top: 20vh;
-  width: 40%;
+  width: 80%;
   background-color: white;
   padding: 1rem;
   border-radius: 14px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
-  left: calc(50% - 20%);
+  left: 5%;
 }
 
-/* @media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .modal {
-    left: calc(50% - 15rem);
+    width: 40%;
+    left: calc(50% - 20%);
   }
-} */
+}
 
 @keyframes slide-down {
   from {

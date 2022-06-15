@@ -12,16 +12,16 @@ const Header = (props) => {
     props.setPage("Home")
   }
 
-  const showCart = props.page === "Home" && props.userType !== "vendor"
+  const showCart =
+    (props.page === "Home" || props.page === "About") &&
+    props.userType !== "vendor"
 
   const navbar = () => {
     return (
       <div>
         {props.isLoggedIn ? (
           <span>
-            <button className={classes.user}>
-              Welcome, {props.isLoggedIn}
-            </button>
+            <button className={classes.user}>Hi, {props.isLoggedIn}</button>
             <button className={classes.navlink} onClick={props.onLogout}>
               Logout
             </button>

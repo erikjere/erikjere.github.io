@@ -69,6 +69,10 @@
   border: none;
 }
 
+.card-increase-button:disabled {
+  background-color: #ccc;
+}
+
 .card-decrease-button {
   width: 15%;
   padding: 6px;
@@ -77,6 +81,10 @@
   color: #fff;
   background-color: #6ede8a;
   border: none;
+}
+
+.card-decrease-button:disabled {
+  background-color: #ccc;
 }
 
 .card-add-to-cart-button {
@@ -89,12 +97,13 @@
   border: none;
 }
 
+.card-add-to-cart-button:disabled {
+  background-color: #ccc;
+}
+
 .card-add-to-cart {
   margin-left: 2em;
   margin-right: 1em;
-}
-.sub-card:hover .card-inner {
-  transform: rotateY(180deg);
 }
 
 .card-image {
@@ -117,26 +126,49 @@
   align-items: center;
 }
 
-.card-add-to-cart-button:hover {
+/* Add on click rotation on mobile */
+
+.card-add-to-cart-button:active:enabled {
   background-color: #3162df;
-}
-
-.card-add-to-cart-button:active {
   transform: translateY(2px);
 }
 
-.card-decrease-button:hover {
+.card-decrease-button:active:enabled {
   background-color: #60c379;
+  transform: translateY(2px);
 }
 
-.card-increase-button:hover {
+.card-increase-button:active:enabled {
   background-color: #60c379;
-}
-
-.card-decrease-button:active {
   transform: translateY(2px);
 }
 
-.card-increase-button:active {
-  transform: translateY(2px);
+@media only screen and (min-width: 768px) {
+  .sub-card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-add-to-cart-button:hover:enabled {
+    background-color: #3162df;
+  }
+
+  .card-add-to-cart-button:active:enabled {
+    transform: translateY(2px);
+  }
+
+  .card-decrease-button:hover:enabled {
+    background-color: #60c379;
+  }
+
+  .card-increase-button:hover:enabled {
+    background-color: #60c379;
+  }
+
+  .card-decrease-button.card-decrease-button:active:enabled {
+    transform: translateY(2px);
+  }
+
+  .card-increase-button:active:enabled {
+    transform: translateY(2px);
+  }
 }

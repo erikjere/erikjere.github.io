@@ -4,7 +4,7 @@ footer {
   left: 0;
   right: 0;
   width: 100%;
-  height: 4%;
+  height: 3%;
   background-color: #74c69d;
   display: flex;
   justify-content: center;
@@ -13,7 +13,7 @@ footer {
 }
 
 .link {
-  font-size: 1.5em;
+  font-size: 1em;
   user-select: none;
   text-decoration: none;
   color: black;
@@ -33,4 +33,13 @@ footer {
 
 .twitter-icon {
   color: #1d9bf0;
+}
+
+@media only screen and (min-width: 768px) {
+  footer {
+    height: 4%;
+  }
+  .link {
+    font-size: 1.5em;
+  }
 }

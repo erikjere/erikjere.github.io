@@ -6,10 +6,10 @@ import "./OfferCard.css"
 const OfferCard = (props) => {
   const cartCtx = useContext(CartContext)
   const [amount, setAmount] = useState(1)
+  const [availableAmount, setAvailableAmount] = useState(props.quantity)
 
   const addToCartHandler = () => {
-    const enteredAmount = parseInt(amount)
-    if (enteredAmount.length === 0) {
+    if (amount.length === 0) {
       return
     }
     cartCtx.addItem({
@@ -17,8 +17,10 @@ const OfferCard = (props) => {
       name: props.name,
       price: props.price,
       quantity: props.quantity,
-      amount: enteredAmount,
+      amount: amount,
     })
+    setAvailableAmount((availableAmount) => availableAmount - amount)
+    setAmount(1)
   }
 
   const increaseAmountHandler = () => {
@@ -32,6 +34,10 @@ const OfferCard = (props) => {
       setAmount(amount - 1)
     }
   }
+
+  const disableDecrease = amount === 1
+  const disableIncrease = amount === props.quantity || amount >= availableAmount
+  const disableAddToCart = availableAmount === 0
 
   return (
     <Card>
@@ -54,15 +60,18 @@ const OfferCard = (props) => {
         <p className="card-address">{props.address}</p>
         <div className="quantity">
           <button
+            // className={decreaseButtonClasses}
             className="card-decrease-button"
             onClick={decreaseAmountHandler}
+            disabled={disableDecrease}
           >
             -
           </button>
           <p className="card-quantity">{amount}</p>
           <button
-            className="card-increase-button"
+            className={"card-increase-button"}
             onClick={increaseAmountHandler}
+            disabled={disableIncrease}
           >
             +
           </button>
@@ -70,6 +79,7 @@ const OfferCard = (props) => {
             <button
               className="card-add-to-cart-button"
               onClick={addToCartHandler}
+              disabled={disableAddToCart}
             >
               Add to cart
             </button>

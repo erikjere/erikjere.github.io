@@ -1,28 +1,11 @@
 .navbar {
   background-color: #74c69d;
   color: black;
-  padding: 10px;
-  font-size: 1.5em;
+  padding: 5px;
+  font-size: 1em;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-.navlink {
-  color: white;
-  font-size: 0.9em;
-  text-decoration: none;
-  margin-left: 10px;
-  margin-right: 2px;
-  border-radius: 10px;
-  border: 1px solid black;
-  padding: 5px 10px;
-  background-color: black;
-  width: auto;
-  cursor: pointer;
-}
-
-.navlink:hover {
-  background-color: #2e2e2e;
+  justify-content: space-between;
 }
 
 .logo {
@@ -36,12 +19,43 @@
   padding: 0;
 }
 
-.user {
-  font-size: 1em;
-  user-select: none;
+.navlink {
+  color: white;
+  font-size: 0.9em;
   text-decoration: none;
-  color: black;
-  background: none;
-  border: none;
-  padding: 0;
+  margin-left: 10px;
+  margin-right: 2px;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 5px 10px;
+  background-color: black;
+  width: auto;
+}
+
+.user {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .navlink {
+    cursor: pointer;
+  }
+  .navbar {
+    padding: 10px;
+    font-size: 1.5em;
+  }
+
+  .navlink:hover {
+    background-color: #2e2e2e;
+  }
+
+  .user {
+    font-size: 1em;
+    user-select: none;
+    text-decoration: none;
+    color: black;
+    background: none;
+    border: none;
+    padding: 0;
+  }
 }
