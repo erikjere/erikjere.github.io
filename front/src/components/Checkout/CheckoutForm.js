@@ -4,7 +4,7 @@ import classes from "./CheckoutForm.module.css"
 const CheckoutForm = () => {
   return (
     <div className={classes.container}>
-      <h1>Credit card info</h1>
+      <h1 className={classes.title}>Credit card info</h1>
       <form className={classes.form}>
         <label className={classes.label}>Name on Card:</label>
         <input className={classes.input} type="text" name="nameOnCard" />

@@ -3,7 +3,7 @@ import OfferCard from "./OfferCard"
 import food from "../../food.json"
 import "./Offers.css"
 
-const Offers = () => {
+const Offers = (props) => {
   let cardNumber = 0
   const offersList = food.map((offer) => {
     cardNumber++
@@ -18,6 +18,7 @@ const Offers = () => {
         description={offer.description}
         quantity={offer.quantity}
         address={offer.address}
+        showCart={props.showCart}
       ></OfferCard>
     )
   })

@@ -8,13 +8,14 @@ const Home = (props) => {
     props.onHideCart()
     props.setPage("Checkout")
   }
+  const showCart = props.showCart
 
   return (
     <div className={classes.container}>
       {props.showCart && (
         <Cart onCheckout={openCheckout} onHideCart={props.onHideCart} />
       )}
-      <Offers />
+      <Offers showCart={showCart} />
     </div>
   )
 }

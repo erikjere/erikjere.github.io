@@ -63,6 +63,15 @@ function App() {
     }
   }
 
+  //call hideCartHandler on ESC
+  const onKeyDown = (e) => {
+    if (e.key === "Escape") {
+      hideCartHandler()
+    }
+  }
+
+  document.addEventListener("keydown", onKeyDown)
+
   return (
     <CartProvider>
       <Header

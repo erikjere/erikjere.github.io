@@ -50,7 +50,7 @@ const cartReducer = (state, action) => {
     const updatedTotalAmount = state.totalAmount - item.price * item.amount
 
     const itemIndex = state.items.indexOf(item)
-    const updatedItems = [...state.items]
+    let updatedItems = [...state.items]
     updatedItems.splice(itemIndex, 1)
 
     return {

@@ -23,7 +23,7 @@ const CheckoutInfo = () => {
 
   return (
     <div className={classes.container}>
-      <h1>Order summary</h1>
+      <h1 className={classes.title}>Order summary</h1>
       <ul className={classes.list}>{cartItem}</ul>
       <p className={classes["total-p"]}>
         <span>Total:</span>

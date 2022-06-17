@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import Card from "../UI/Card"
 import CartContext from "../../store/cart-context"
 import "./OfferCard.css"
@@ -7,6 +7,7 @@ const OfferCard = (props) => {
   const cartCtx = useContext(CartContext)
   const [amount, setAmount] = useState(1)
   const [availableAmount, setAvailableAmount] = useState(props.quantity)
+  const [disableAddToCart, setDisableAddToCart] = useState(false)
 
   const addToCartHandler = () => {
     if (amount.length === 0) {
@@ -19,8 +20,6 @@ const OfferCard = (props) => {
       quantity: props.quantity,
       amount: amount,
     })
-    setAvailableAmount((availableAmount) => availableAmount - amount)
-    setAmount(1)
   }
 
   const increaseAmountHandler = () => {
@@ -35,9 +34,30 @@ const OfferCard = (props) => {
     }
   }
 
-  const disableDecrease = amount === 1
+  useEffect(() => {
+    const item = cartCtx.items.find((item) => item.id === props.id)
+    if (item) {
+      if (item.amount === item.quantity) {
+        //Max item quantity is in the cart
+        setAvailableAmount(0)
+        setAmount(0)
+        setDisableAddToCart(true)
+      } else {
+        //Item is in the cart but not max quantity
+        setAvailableAmount(item.quantity - item.amount)
+        setAmount(1)
+        setDisableAddToCart(false)
+      }
+    } else {
+      //Item is not in the cart
+      setAvailableAmount(props.quantity)
+      setAmount(1)
+      setDisableAddToCart(false)
+    }
+  }, [cartCtx.items, props.id, props.quantity])
+
+  const disableDecrease = amount <= 1
   const disableIncrease = amount === props.quantity || amount >= availableAmount
-  const disableAddToCart = availableAmount === 0
 
   return (
     <Card>
@@ -60,7 +80,6 @@ const OfferCard = (props) => {
         <p className="card-address">{props.address}</p>
         <div className="quantity">
           <button
-            // className={decreaseButtonClasses}
             className="card-decrease-button"
             onClick={decreaseAmountHandler}
             disabled={disableDecrease}
