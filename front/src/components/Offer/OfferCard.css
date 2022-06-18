@@ -126,24 +126,7 @@
   align-items: center;
 }
 
-/* Add on click rotation on mobile */
-
-.card-add-to-cart-button:active:enabled {
-  background-color: #3162df;
-  transform: translateY(2px);
-}
-
-.card-decrease-button:active:enabled {
-  background-color: #60c379;
-  transform: translateY(2px);
-}
-
-.card-increase-button:active:enabled {
-  background-color: #60c379;
-  transform: translateY(2px);
-}
-
-@media only screen and (min-width: 768px) {
+@media (hover: hover) {
   .sub-card:hover .card-inner {
     transform: rotateY(180deg);
   }
@@ -169,6 +152,26 @@
   }
 
   .card-increase-button:active:enabled {
+    transform: translateY(2px);
+  }
+}
+
+@media (hover: none) {
+  .rotated {
+    transform: rotateY(180deg);
+  }
+  .card-add-to-cart-button:active:enabled {
+    background-color: #3162df;
+    transform: translateY(2px);
+  }
+
+  .card-decrease-button:active:enabled {
+    background-color: #60c379;
+    transform: translateY(2px);
+  }
+
+  .card-increase-button:active:enabled {
+    background-color: #60c379;
     transform: translateY(2px);
   }
 }

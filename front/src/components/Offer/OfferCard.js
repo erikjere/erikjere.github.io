@@ -8,6 +8,7 @@ const OfferCard = (props) => {
   const [amount, setAmount] = useState(1)
   const [availableAmount, setAvailableAmount] = useState(props.quantity)
   const [disableAddToCart, setDisableAddToCart] = useState(false)
+  const [isRotated, setIsRotated] = useState(false)
 
   const addToCartHandler = () => {
     if (amount.length === 0) {
@@ -32,6 +33,10 @@ const OfferCard = (props) => {
     if (amount > 1) {
       setAmount(amount - 1)
     }
+  }
+
+  const rotationHandler = () => {
+    setIsRotated((isRotated) => !isRotated)
   }
 
   useEffect(() => {
@@ -59,10 +64,12 @@ const OfferCard = (props) => {
   const disableDecrease = amount <= 1
   const disableIncrease = amount === props.quantity || amount >= availableAmount
 
+  const cardInnerClasses = isRotated ? "card-inner rotated" : "card-inner"
+
   return (
     <Card>
       <div className="sub-card">
-        <div className="card-inner">
+        <div className={cardInnerClasses} onClick={rotationHandler}>
           <img
             className="card-image"
             src={require("../" + props.image)}
