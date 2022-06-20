@@ -1,20 +1,10 @@
-/* .navbar {
-  background-color: #74c69d;
-  color: black;
-  padding: 5px;
-  font-size: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
-
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: auto;
-  height: 5%;
+  height: 32px;
   background-color: #74c69d;
   display: flex;
   align-items: center;
