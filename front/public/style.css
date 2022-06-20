@@ -5,4 +5,5 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-blend-mode: darken;
+  height: 100vh;
 }
