@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
   background-color: #74c69d;
   color: black;
   padding: 5px;
@@ -6,6 +6,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+} */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: 5%;
+  background-color: #74c69d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  padding: 5px;
 }
 
 .logo {
@@ -40,6 +55,9 @@
   .logo {
     font-size: 1.5em;
   }
+  .navbar {
+    font-size: 1em;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -47,6 +65,7 @@
     cursor: pointer;
   }
   .navbar {
+    position: relative;
     padding: 10px;
     font-size: 1.5em;
   }
