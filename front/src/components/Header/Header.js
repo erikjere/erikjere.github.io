@@ -36,12 +36,7 @@ const Header = (props) => {
             </button>
           </span>
         )}
-        {showCart && (
-          // <button className={classes.navlink} onClick={props.onShowCart}>
-          //   Cart
-          // </button>
-          <CartButton onClick={props.onShowCart} />
-        )}
+        {showCart && <CartButton onClick={props.onShowCart} />}
       </div>
     )
   }

@@ -19,6 +19,28 @@
   margin-left: 2px;
   margin-bottom: 2px;
 }
+.bouncing {
+  -webkit-animation: bounce 0.3s infinite alternate;
+  -moz-animation: bounce 0.3s infinite alternate;
+  animation: bounce 0.3s infinite alternate;
+}
+
+/*bounce*/
+@-webkit-keyframes bounce {
+  to {
+    -webkit-transform: scale(1.2);
+  }
+}
+@-moz-keyframes bounce {
+  to {
+    -moz-transform: scale(1.2);
+  }
+}
+@keyframes bounce {
+  to {
+    transform: scale(1.2);
+  }
+}
 
 @media only screen and (min-width: 768px) {
   .button {

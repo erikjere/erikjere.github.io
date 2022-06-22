@@ -4,8 +4,7 @@ import CartContext from "../../store/cart-context"
 
 const CheckoutInfo = () => {
   const cartCtx = useContext(CartContext)
-  // const cart = localStorage.getItem("cart")
-  // const cartItems = JSON.parse(cart)
+
   const cartItems = cartCtx.items
   const cartItem = cartItems.map((item) => (
     <li className={classes.item} key={item.id}>
